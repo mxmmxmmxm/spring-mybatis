@@ -39,6 +39,7 @@ public class CustomerServiceImpl implements CustomerService {
         list = customerDao.findAll();
         redisTemplate.boundValueOps(key).set(list);
         System.out.println("from mysql list = " + list);
+        System.out.println("你到底是个什么人？");
         return list;
     }
 
