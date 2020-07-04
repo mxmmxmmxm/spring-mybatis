@@ -33,7 +33,7 @@ public class CustomerServiceImpl implements CustomerService {
         String key = "allcustomer";
         List<Customer> list = (List<Customer>)redisTemplate.boundValueOps(key).get();
         if(list!=null){
-            System.out.println("from redis list = " + list);
+            System.out.println("from redis list = ");
             return list ;
         }
         list = customerDao.findAll();
